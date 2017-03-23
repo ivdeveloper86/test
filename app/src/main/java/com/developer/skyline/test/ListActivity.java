@@ -241,16 +241,29 @@ public class ListActivity extends AppCompatActivity {
                     }
 
                     // присваиваем данные TextView
-                    if (n == 0) textView0.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
-                    if (n == 1) textView1.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
-                    if (n == 2) textView2.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
-                    if (n == 3) textView3.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
-                    if (n == 4) textView4.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
-                    if (n == 5) textView5.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
-                    if (n == 6) textView6.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
-                    if (n == 7) textView7.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
-                    if (n == 8) textView8.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
-                    if (n == 9) textView9.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                        if (n == 0) textView0.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription,Html.FROM_HTML_MODE_LEGACY));
+                        if (n == 1) textView1.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription,Html.FROM_HTML_MODE_LEGACY));
+                        if (n == 2) textView2.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription,Html.FROM_HTML_MODE_LEGACY));
+                        if (n == 3) textView3.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription,Html.FROM_HTML_MODE_LEGACY));
+                        if (n == 4) textView4.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription,Html.FROM_HTML_MODE_LEGACY));
+                        if (n == 5) textView5.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription,Html.FROM_HTML_MODE_LEGACY));
+                        if (n == 6) textView6.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription,Html.FROM_HTML_MODE_LEGACY));
+                        if (n == 7) textView7.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription,Html.FROM_HTML_MODE_LEGACY));
+                        if (n == 8) textView8.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription,Html.FROM_HTML_MODE_LEGACY));
+                        if (n == 9) textView9.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription,Html.FROM_HTML_MODE_LEGACY));
+                    } else {
+                        if (n == 0) textView0.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                        if (n == 1) textView1.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                        if (n == 2) textView2.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                        if (n == 3) textView3.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                        if (n == 4) textView4.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                        if (n == 5) textView5.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                        if (n == 6) textView6.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                        if (n == 7) textView7.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                        if (n == 8) textView8.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                        if (n == 9) textView9.setText(Html.fromHtml("<b>" + title + "</b>" + "<br>" + formattedTime + "<br>" + shortDescription));
+                    }
                 }
 
             } catch (JSONException e) {
